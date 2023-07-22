@@ -42,6 +42,10 @@ Setup Tips
      - sudo apt-get install python3-all-dev 
      - pip3 install pyaudio
      - pip3 install SpeechRecognition
+     - sudo pip3 install aiohttp
+     - git clone https://github.com/openai/openai-python.git
+     - cd openai-python
+     - sudo python3 setup.py install
 
 5) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
@@ -66,7 +70,7 @@ Setup Tips
    - https://courses.nvidia.com/courses/course-v1:DLI+S-RX-02+V2/courseware/b2e02e999d9247eb8e33e893ca052206/63a4dee75f2e4624afbc33bce7811a9b/
 
 
-8) NOT NEEDED - JUST HERE FOR INFO - HOW TO INSTALL PYTHON VIRTUAL ENVIRONMENT. Execute the following in a terminal
+## NOT NEEDED - JUST HERE FOR INFO - e.g. HOW TO INSTALL PYTHON VIRTUAL ENVIRONMENT.
    - In a terminal window, execute the following commands:
      - sudo apt-get install -y python3-venv
      - python3 -m venv .py3venv
@@ -88,8 +92,3 @@ Setup Tips
      - sudo apt-get install flac
      - sudo pip3 uninstall numpy
      - pip3 install numpy
-
-
-    
-
-
