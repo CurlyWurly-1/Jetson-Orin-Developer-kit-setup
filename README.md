@@ -43,7 +43,7 @@ Setup Tips
      - pip3 install pyaudio
      - pip3 install SpeechRecognition
 
-5) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs
+5) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
    - https://github.com/CurlyWurly-1/Face_Recognition_With_Moving_Eyeball
  - Speech Recognition with a spoken response taken from GPT-3 
