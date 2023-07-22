@@ -46,6 +46,7 @@ Setup Tips
      - git clone https://github.com/openai/openai-python.git
      - cd openai-python
      - sudo python3 setup.py install
+     - sudo apt-get install flac
 
 5) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
