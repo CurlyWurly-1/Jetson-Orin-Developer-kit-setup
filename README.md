@@ -4,13 +4,37 @@
 Setup Tips 
 
 
-1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup - This assumes a network cable has been inserted which connects to your router. Also, be aware that after a power up, you may have to remove and re-insert the USB cables for the webcam and speakers. This seems to be necessary because the Jetson Developer kit seems to forget the USB devices that are already attached to it on power up. Re-inserting the USB devices after power up seems to fix this.)  
-   - Remove SD card
-   - Install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)
-   - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software. When using the SDK Manager software, insert the USB "C" cable and the Jumper connection first. After the Jetson device has been recognised by the SDK manager software, remove the jumper connection straight away. Start the flashing and when that initial part has completed and a new window is displayed, remove the USB "C" cable and complete the remaining software installation with a network cable i.e. Use the IP address of the Wifi card/network card (whatever it being used).    
-   - Attach USB keyboard and mouse
-   - Attach USB webcam e.g. Logitech C902  
-   - Attach USB speakers 
+1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) - Be aware that you may have to remove and re-insert the USB cables for the webcam and speakers to work OK after a power up. This seems to be necessary because after a power up, the Jetson Developer kit can "forget" what USB devices are already attached to it. Removing and re-inserting the USB cable for the affected devices seems to fix this.  
+   - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here https://developer.nvidia.com/embedded/learn/jetson-agx-orin-devkit-user-guide/two_ways_to_set_up_software.html
+     - Ubuntu Desktop
+       - Install Ubuntu 20.04 onto desktop with at least 256 G hard drive memory 
+       - Download and install SDK manager software from here https://developer.nvidia.com/embedded/downloads#?search=sdk
+     - Jetson Orin Developer kit (start with all USB devices unplugged and no power cable connected)
+       - Physically remove SD card
+       - Physically install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)       - 
+       - Use a female to female dupont lead to short pins 9 and 10 together. Pins 9 amd 10 are part of a row of 12 pins that can be seen on the side of the Jetson developer kit.
+       - Attach USB "C" cable to Jetson Orin developer kit and connect to Ubuntu desktop
+       - Attach network cable to Jetson Orin Developer kit and connect to router/network 
+       - Attach HDMI cable to Jetson Orin Developer kit and connect to a display
+       - Attach USB keyboard and mouse 
+       - Attach power cable and power up Jetson Orin (it will boot in recovery mode because pins 9 and 10 are shorted)
+     - Ubuntu Desktop
+       - Execute SDK manager and the Jetson Orin developer kit should be seen - Start the download and flashing process and when prompted, choose "Manual method" and that the "NVME" drive is to be used for installing software. Note the user and password you are using.
+       - When the flashing start, wait a few seconds to check that all is progressing OK. If it is, remove the dupont lead from pins 9 and 10 because it is now no longer needed. If this dupont lead was left connected, it will cause a re-boot problem later on because the Jetson Orin developer kit will always boot in recovery mode. Later on in this process, we no longer want the Jetson Orin developer kit to do that, so remove the dupont lead now!
+       - When the first part of initial flashing has completed, another window is displayed - before continuing, do a few things on the Jetson Orin developer kit as below - To find out the IP address
+     - Jetson Orin Developer kit 
+       - Remove the USB "C" cable
+       - Log into the Jetson Orin developer kit using the user and password you noted before - and find out its IP address through the network cable
+       - Log out of Jetson Orin Developer kit
+     - Ubuntu Desktop
+       - In the new window, enter the IP address just found and ensure you are using the network "ethernet" option before pressing continue
+       - Wait until process is complete.
+       - Once the flashing is complete, most people no longer need to keep the Ubuntu desktop really.   
+     - Jetson Orin Developer kit 
+       - Log into the Jetson Orin developer kit using the user and password you noted before
+       - Attach USB webcam e.g. Logitech C902  
+       - Attach USB speakers
+       - Set up Wifi as approrpriate - via a wifi card or dongle and optionally remove the network cable.
 
 2) INSTALL VSCODE
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
