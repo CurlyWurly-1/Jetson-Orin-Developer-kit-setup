@@ -22,7 +22,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seemes to for
        - Attach USB keyboard and mouse 
        - Attach power cable and power up Jetson Orin (it will boot in recovery mode because pins 9 and 10 are shorted)
      - Ubuntu Desktop
-       - Execute SDK manager and start and progress each step of the 4 step process - The Jetson Orin developer kit should be seen ticked green - When prompted,
+       - Execute SDK manager and start and progress each step of the 4 step process using the manual method - Click here to see how this looks https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t=417s N.B. The Jetson Orin developer kit should be recognised and ticked "green", with a summary of the options that you need to select, are listed as follows:
          - Choose a "USB" connection
          - Choose "pre-config"
          - Choose "Manual method"
