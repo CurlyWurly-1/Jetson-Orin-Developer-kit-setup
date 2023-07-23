@@ -34,7 +34,7 @@ Setup Tips
        - Log out of Jetson Orin Developer kit
      - Ubuntu Desktop
        - In the new window
-         - Ensure you are using the "ethernet" option
+         - Choose an "ETHERNET" connection (not "USB")
          - Enter the IP address just found
          - Press continue
          - Wait until process is complete.
