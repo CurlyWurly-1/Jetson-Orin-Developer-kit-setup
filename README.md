@@ -31,6 +31,8 @@ Setup Tips
      - pip3 install cython
      - pip3 install gtts
      - pip3 install playsound
+     - sudo apt-get install sox
+     - sudo apt-get install libsox-fmt-all
      - pip3 install pyttsx3
      - sudo apt install espeak
      - pip3 install pyserial
