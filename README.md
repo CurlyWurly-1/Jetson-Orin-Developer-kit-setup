@@ -8,7 +8,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seemes to for
 1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
-   - This is the written up list of the video
+   - This is the written up list of the the necessary actions that worked for me
      - Ubuntu Desktop
        - Install Ubuntu 20.04 onto desktop with at least 256 G hard drive memory 
        - Download and install SDK manager software from here https://developer.nvidia.com/embedded/downloads#?search=sdk
