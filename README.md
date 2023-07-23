@@ -23,7 +23,7 @@ Setup Tips
    - mkdir zdemo
    - cd zdemo
    - git clone --recursive --depth=1 https://github.com/dusty-nv/jetson-inference
- - Execute Docker Container (select one of the 7 demo python programs to execute)
+ - Execute Docker Container (select one of the 7 demo python programs to execute) N.B. The first time each python program is executed, they take a long time to complete their "one-time only" build - Just wait - It can take up to 10 mins.
    - cd ~/Desktop/zdemo/jetson-inference
    - docker/run.sh
    - cd build/aarch64/bin 
