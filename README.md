@@ -26,7 +26,7 @@ Setup Tips
          - Select "NVME" drive for installing software.
          - Note the name you are giving the Jetson Orin developer kit - I used "orin"
          - Note the user and password you are using.
-       - When the flashing actually starts, wait a few seconds to check that all is progressing OK. If it is, remove the dupont lead from pins 9 and 10 because it is now no longer needed. If this dupont lead was left connected, it will cause a re-boot problem later on because the Jetson Orin developer kit will always boot in recovery mode. Later on in this process, we no longer want the Jetson Orin developer kit to do that, so remove the dupont lead now!
+       - When the flashing actually starts, wait a few seconds to check that all is progressing OK. If it is, remove the dupont lead from pins 9 and 10 because it is now no longer needed. If this dupont lead was left connected, it would cause a re-boot problem later on because the Jetson Orin developer kit would always boot in recovery mode instead of booting to a normal logon screen. Later on in this process, we really want the Jetson Orin developer kit to boot to a logon screen, so remove the dupont lead now!
        - When the first part of initial flashing has completed, another window is displayed - before continuing, do a few things on the Jetson Orin developer kit as below - To find out the IP address
      - Jetson Orin Developer kit 
        - Remove the USB "C" cable
