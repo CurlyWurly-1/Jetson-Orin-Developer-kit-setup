@@ -57,7 +57,25 @@ Setup Tips
  - Speech Recognition with a spoken response taken from GPT-3 
    - https://github.com/CurlyWurly-1/Chatbot
 
+6) JETSON INFERENCE Demo software
+ - Install Docker Container - Open a terminal and execute the following:
+   - mkdir zdemo
+   - cd zdemo
+   - git clone --recursive --depth=1 https://github.com/dusty-nv/jetson-inference
+ - Execute Docker Container 
+   - cd ~/Desktop/zdemo/jetson-inference
+   - docker/run.sh
+   - cd build/aarch64/bin 
+   - ./imagenet.py /dev/video0         *******(DEMO 1 - Image Classification)
+   - ./detectnet.py /dev/video0        *******(DEMO 2 - Object Detection)
+   - ./segnet.py /dev/video0           *******(DEMO 3 - Semantic Segmentation)
+   - ./posenet.py /dev/video0          *******(DEMO 4 - Pose Estimation)
+   - ./actionnet.py /dev/video0        *******(DEMO 5 - Action Recognition)
+   - ./backgroundnet.py /dev/video0    *******(DEMO 6 - Background removal)
+   - ./depthnet.py /dev/video0         *******(DEMO 7 - Monocular Depth)     
 
+
+       
 ## Extra Stuff
 
 6) INSTALL THE COURSE JUPYTER NOTEBOOK. 
