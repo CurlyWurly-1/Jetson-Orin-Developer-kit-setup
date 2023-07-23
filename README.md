@@ -19,15 +19,16 @@ Setup Tips
        - Attach USB keyboard and mouse 
        - Attach power cable and power up Jetson Orin (it will boot in recovery mode because pins 9 and 10 are shorted)
      - Ubuntu Desktop
-       - Execute SDK manager and the Jetson Orin developer kit should be seen - Start the download and flashing process and when prompted,
+       - Execute SDK manager and start and progress each step of the 4 step process - The Jetson Orin developer kit should be seen ticked green - When prompted,
          - Choose a "USB" connection
          - Choose "pre-config"
          - Choose "Manual method"
          - Select "NVME" drive for installing software.
          - Note the name you are giving the Jetson Orin developer kit - I used "orin"
          - Note the user and password you are using.
-       - When the flashing actually starts, wait a few seconds to check that all is progressing OK. If it is, remove the dupont lead from pins 9 and 10 because it is now no longer needed. If this dupont lead was left connected, it would cause a re-boot problem later on because the Jetson Orin developer kit would always boot in recovery mode instead of booting to a normal logon screen. Later on in this process, we really want the Jetson Orin developer kit to boot to a logon screen, so remove the dupont lead now!
-       - When the first part of initial flashing has completed, another window is displayed - before continuing, do a few things on the Jetson Orin developer kit as below - To find out the IP address
+         - Start the download and flashing process 
+       - If flashing seems to be working OK, wait a few seconds and then remove the dupont lead from pins 9 and 10. If this dupont lead was left connected, it would cause a re-boot problem later on because the Jetson Orin developer kit would always boot in recovery mode. Later on in this process, we really want the Jetson Orin developer kit to boot to a logon screen instead of booting in recovery mode, so remove the dupont lead now!
+       - When the first part of initial flashing has completed, another window is displayed - Before pressing continue, do a few things on the Jetson Orin developer kit to find out the IP address (as below in the next few steps). Therafter continue as per the next section titled "Ubuntu Desktop) 
      - Jetson Orin Developer kit 
        - Remove the USB "C" cable
        - Log into the Jetson Orin developer kit using the user and password you noted before - and find out its IP address through the network cable
