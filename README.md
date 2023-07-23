@@ -28,7 +28,7 @@ Setup Tips
          - Note the user and password you are using.
          - Start the download and flashing process 
        - If flashing seems to be working OK, wait a few seconds and then remove the dupont lead from pins 9 and 10. If this dupont lead was left connected, it would cause a re-boot problem later on because the Jetson Orin developer kit would always boot in recovery mode. Later on in this process, we really want the Jetson Orin developer kit to boot to a logon screen instead of booting in recovery mode, so remove the dupont lead now!
-       - When the first part of initial flashing has completed, another window is displayed - Before pressing continue, do a few things on the Jetson Orin developer kit to find out the IP address (as below in the next few steps). Therafter continue as per the next section titled "Ubuntu Desktop) 
+       - When the first part of initial flashing has completed, another window is displayed - Before pressing continue, do a few things on the Jetson Orin developer kit to find out the IP address (as below in the next few steps). Therafter continue as per the next section titled "Ubuntu Desktop" 
      - Jetson Orin Developer kit 
        - Remove the USB "C" cable
        - Log into the Jetson Orin developer kit using the user and password you noted before - and find out its IP address through the network cable
