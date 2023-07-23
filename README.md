@@ -44,7 +44,7 @@ Setup Tips
        - Log into the Jetson Orin developer kit using the user and password you noted before
        - Attach USB webcam e.g. Logitech C902  
        - Attach USB speakers
-       - Set up Wifi as approrpriate - via a wifi card or dongle and optionally remove the network cable.
+       - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
 2) INSTALL VSCODE
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
