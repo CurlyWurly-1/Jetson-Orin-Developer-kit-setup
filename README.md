@@ -10,8 +10,8 @@ Setup Tips
        - Install Ubuntu 20.04 onto desktop with at least 256 G hard drive memory 
        - Download and install SDK manager software from here https://developer.nvidia.com/embedded/downloads#?search=sdk
      - Jetson Orin Developer kit (start with all cables unplugged and no power cable connected)
-       - Physically remove SD card
-       - Physically install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)       - 
+       - Physically remove SD card (Just push it in and it will spring out slightly)
+       - Physically install NVME drive (e.g. Samsung 970 EVO Plus - 1TB) https://www.youtube.com/watch?v=q4fGac-nrTI - Don't do anything else in the video - just install NVME drive
        - Use a female to female dupont lead to short pins 9 and 10 together. Pins 9 amd 10 are part of a row of 12 pins that can be seen on the side of the Jetson developer kit.
        - Attach USB "C" cable to Jetson Orin developer kit and connect to Ubuntu desktop
        - Attach network cable to Jetson Orin Developer kit and connect to router/network 
