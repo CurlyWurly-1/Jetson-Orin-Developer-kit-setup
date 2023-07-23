@@ -4,10 +4,11 @@
 Setup Tips 
 
 
-1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup)  
+1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup - assumes a wifi card has been installed and used, or network connection available)  
    - Remove SD card
    - Install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)
    - Use Jetson SDK Manager to install software into NVME drive 
+   - Attach USB keyboard and mouse
    - Attach USB webcam e.g. Logitech C902
    - Attach USB speakers 
 
