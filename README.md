@@ -32,6 +32,7 @@ Setup Tips
      - pip3 install gtts
      - pip3 install playsound
      - pip3 install pyttsx3
+     - sudo apt install espeak
      - pip3 install pyserial
      - sudo apt-get update
      - sudo apt-get upgrade
