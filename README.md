@@ -7,7 +7,7 @@ Setup Tips
 1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup - This assumes a wifi card or wifi dongle has already been installed and being used, or a network cable inserted which connects to your router). Also, be aware that after a power up, you may have to remove and re-insert the USB cables for the webcam and speakers. This seems to be necessary because the Jetson Developer kit seems to forget the USB devices that are already attached to it on power up. Re-inserting the USB devices after power up seems to fid this.)  
    - Remove SD card
    - Install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)
-   - Use Jetson SDK Manager to install software into NVME drive 
+   - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software. When using the SDK Manager software, start with the USB "C" cable first. After the Jetson device has been flashed, remove the USB "C" cable and complete the software installation with a network connection i.e. Use the IP address of the Wifi card/network card (whatever it being used).   
    - Attach USB keyboard and mouse
    - Attach USB webcam e.g. Logitech C902  
    - Attach USB speakers 
