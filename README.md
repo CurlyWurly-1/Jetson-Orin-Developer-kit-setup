@@ -66,13 +66,13 @@ Setup Tips
    - cd ~/Desktop/zdemo/jetson-inference
    - docker/run.sh
    - cd build/aarch64/bin 
-   - ./imagenet.py /dev/video0         *******(DEMO 1 - Image Classification)
-   - ./detectnet.py /dev/video0        *******(DEMO 2 - Object Detection)
-   - ./segnet.py /dev/video0           *******(DEMO 3 - Semantic Segmentation)
-   - ./posenet.py /dev/video0          *******(DEMO 4 - Pose Estimation)
-   - ./actionnet.py /dev/video0        *******(DEMO 5 - Action Recognition)
-   - ./backgroundnet.py /dev/video0    *******(DEMO 6 - Background removal)
-   - ./depthnet.py /dev/video0         *******(DEMO 7 - Monocular Depth)     
+   - ./imagenet.py /dev/video0   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 1 - Image Classification)
+   - ./detectnet.py /dev/video0  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 2 - Object Detection)
+   - ./segnet.py /dev/video0     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 3 - Semantic Segmentation)
+   - ./posenet.py /dev/video0    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 4 - Pose Estimation)
+   - ./actionnet.py /dev/video0  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 5 - Action Recognition)
+   - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
+   - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
 
        
