@@ -9,6 +9,7 @@ Setup Tips
    - Install NVME drive (e.g. Samsung 970 EVO Plus - 1TB)
    - Use Jetson SDK Manager to install software into NVME drive 
    - Attach USB webcam e.g. Logitech C902
+   - Attach USB speakers 
 
 2) INSTALL VSCODE
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
