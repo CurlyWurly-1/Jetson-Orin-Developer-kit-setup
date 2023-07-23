@@ -3,8 +3,9 @@
 
 Setup Tips 
 
+Be aware that when a Jetson Orin developer kit is powered down, it seemes to forget what USB devices are attached it. Consider that after a powerup, you always have to remove and re-insert the USB cables of the webcam and speakers to make them be re-recognised as being attached.   
 
-1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) - Be aware that after a powerup, you may have to remove and re-insert the USB cables of the webcam and speakers to make them work OK. This seems to be a necessary workaround because the Jetson Developer kit "forgets" what USB devices are attached to it. Removing and re-inserting the USB cable for the affected devices after a power up seems to fix this.  
+1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
    - This is the written up list of the video
