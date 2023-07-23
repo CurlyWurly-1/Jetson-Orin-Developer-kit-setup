@@ -8,7 +8,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seemes to for
 1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
-   - This is the written up list of the the necessary actions that worked for me
+   - Here are some notes of the actions that worked for me, based on the video above with the actions listed in sequence, but grouped by the device you need to progress the actions on
      - Ubuntu Desktop
        - Install Ubuntu 20.04 onto desktop with at least 256 G hard drive memory 
        - Download and install SDK manager software from here https://developer.nvidia.com/embedded/downloads#?search=sdk
@@ -62,7 +62,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seemes to for
    - mkdir zdemo
    - cd zdemo
    - git clone --recursive --depth=1 https://github.com/dusty-nv/jetson-inference
- - Execute Docker Container (select one of the 7 demo python programs to execute) N.B. The first time each python program is executed, they take a long time to complete their "one-time only" build - Just wait - It can take up to 10 mins.
+ - Execute Docker Container (select one of the 7 demo python programs to execute) N.B. The first time each python program is executed, they take a long time to complete their "one-time only" build - Just wait - The first execution can take up to 10 mins, but subsequent executions fire up after a few seconds.
    - cd ~/Desktop/zdemo/jetson-inference
    - docker/run.sh
    - cd build/aarch64/bin 
