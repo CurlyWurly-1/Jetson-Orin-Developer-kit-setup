@@ -33,8 +33,11 @@ Setup Tips
        - Log into the Jetson Orin developer kit using the user and password you noted before - and find out its IP address through the network cable
        - Log out of Jetson Orin Developer kit
      - Ubuntu Desktop
-       - In the new window, enter the IP address just found and ensure you are using the network "ethernet" option before pressing continue
-       - Wait until process is complete.
+       - In the new window
+         - Ensure you are using the "ethernet" option
+         - Enter the IP address just found
+         - Press continue
+         - Wait until process is complete.
        - Once the flashing is complete, most people no longer need to keep the Ubuntu desktop really.   
      - Jetson Orin Developer kit 
        - Log into the Jetson Orin developer kit using the user and password you noted before
