@@ -78,6 +78,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - Open a terminal and execute:
      - sudo apt-get update
      - sudo apt-get upgrade
+     - sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
      - sudo apt-get install nano
      - sudo apt-get install python3-pip 
      - export PATH="/home/XXX/.local/bin:$PATH"  (replace XXX with your system name e.g. ORIN)
