@@ -66,8 +66,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
  - Execute Docker Container (select one of the 7 demo python programs to execute) N.B. The first time each python program is executed, they take a long time to complete their "one-time only" build - Just wait - The first execution can take up to 10 mins, but subsequent executions fire up after a few seconds.
    - cd ~/Desktop/zdemo/jetson-inference
    - docker/run.sh
-   - cd jetson-inference
-   - cd build/aarch64/bin 
+   - cd jetson-inference/build/aarch64/bin 
    - ./imagenet.py /dev/video0   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 1 - Image Classification)
    - ./detectnet.py /dev/video0  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 2 - Object Detection)
    - ./segnet.py /dev/video0     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 3 - Semantic Segmentation)
