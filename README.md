@@ -57,7 +57,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
    - Right click the VsCode icon and Select "add to desktop" for easy access
 
-3) INSTALL JETSON INFERENCE Demo software and test
+3) INSTALL JETSON INFERENCE Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
  - Install Docker Container - Open a terminal and execute the following:
    - cd Desktop
    - mkdir zdemo
