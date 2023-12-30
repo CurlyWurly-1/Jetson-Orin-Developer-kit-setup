@@ -15,7 +15,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
      - Jetson Orin Developer kit (start with all cables unplugged and no power cable connected)
        - Physically remove SD card (Just push it in and it will spring out slightly)
        - Physically install NVME drive (e.g. Samsung 970 EVO Plus - 1TB) https://www.youtube.com/watch?v=q4fGac-nrTI - Don't do anything else in the video - just install NVME drive
-       - Use a female to female dupont lead to short pins 10 and 11 together - N.B. To locate these pins, look at the row of 12 pins seen on the side of the Jetson developer kit.
+       - Use a female to female dupont lead to short pins 9 and 10 together - N.B. To locate these pins, look at the row of 12 pins seen on the side of the Jetson developer kit.
        - Attach USB "C" cable to Jetson Orin developer kit and connect to Ubuntu desktop
        - Attach network cable to Jetson Orin Developer kit and connect to router/network 
        - Attach HDMI cable to Jetson Orin Developer kit and connect to a display
