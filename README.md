@@ -5,7 +5,12 @@ Setup Tips
 
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
-1) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
+1) Install the FileZilla "client" on your Win10 laptop
+   - On your Windows machine, download the filezilla client via the following URL. It makes your life a lot easier when you want to transfer files to and from a win10 machine and your Jetson
+     https://filezilla-project.org/
+     
+
+2) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
    - Here are some notes of the actions that worked for me, based on the video above with the actions listed in sequence, but grouped by the device you need to progress the actions on
@@ -49,7 +54,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - Attach USB speakers
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
-2) INSTALL VSCODE
+3) INSTALL VSCODE
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
    - Open a terminal and execute the following: 
      - cd Downloads
@@ -57,7 +62,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
    - Right click the VsCode icon and Select "add to desktop" for easy access
 
-3) INSTALL JETSON INFERENCE Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
+4) INSTALL JETSON INFERENCE Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
  - Install Docker Container - Open a terminal and execute the following:
    - cd Desktop
    - mkdir zdemo
@@ -75,7 +80,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
-4) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
+5) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
    - Open a terminal and execute:
      - sudo apt-get update
      - sudo apt-get upgrade
@@ -106,7 +111,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
      - sudo python3 setup.py install
      - sudo apt-get install flac
 
-5) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
+6) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
    - https://github.com/CurlyWurly-1/Face_Recognition_With_Moving_Eyeball
  - Speech Recognition with a spoken response taken from GPT-3 
