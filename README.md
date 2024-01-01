@@ -6,9 +6,7 @@ Setup Tips
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
 1) Install the FileZilla "client" on your Win10 laptop
-   - On your Windows machine, download the filezilla client via the following URL. It makes your life a lot easier when you want to transfer files to and from a win10 machine and your Jetson
-     https://filezilla-project.org/
-     
+   - On your Windows machine, download the filezilla client via https://filezilla-project.org/  It makes your life a lot easier when you want to transfer files between a win10 machine and your Jetson. I tend to use the win10 laptop to backup my important stuff e.g. programs and tip sheets. It makes it a whole lot easier to re-install stuff after you have used the SDK manager to reflash your Jetson     
 
 2) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
