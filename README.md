@@ -6,7 +6,7 @@ Setup Tips
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
 1) Install the FileZilla "client" on your Win10 laptop
-   - On your Windows machine, download the filezilla client via https://filezilla-project.org/  It makes your life a lot easier when you want to transfer files between a win10 machine and your Jetson. I tend to use the win10 laptop to backup my important stuff e.g. programs and tip sheets. It makes it a whole lot easier to re-install stuff after you have used the SDK manager to reflash your Jetson     
+   - On your Windows machine, download the filezilla client via https://filezilla-project.org/  It makes your life a lot easier beign able to transfer files to and from the Jetson. I use a win10 desktop to backup my important Jetson stuff e.g. Jetson python programs and tip sheets. It just makes it a whole lot easier to re-install stuff back to the Jetson after you have used the SDK manager to reflash your Jetson.     
 
 2) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
@@ -78,7 +78,11 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
-5) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
+5) INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
+   - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
+   - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
+
+6) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
    - Open a terminal and execute:
      - sudo apt-get update
      - sudo apt-get upgrade
@@ -109,12 +113,14 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
      - sudo python3 setup.py install
      - sudo apt-get install flac
 
-6) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
+7) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
    - https://github.com/CurlyWurly-1/Face_Recognition_With_Moving_Eyeball
  - Speech Recognition with a spoken response taken from GPT-3 
    - https://github.com/CurlyWurly-1/Chatbot
 
+8) Consider what is in Jetson AI lab https://www.jetson-ai-lab.com/tutorial-intro.html.
+   - N.B. It did not work that well for me using a Jetson Orin Nano
        
 ## Extra Stuff (backup - not tested - ignore)
 
