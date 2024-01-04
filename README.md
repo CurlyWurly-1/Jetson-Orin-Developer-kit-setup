@@ -5,7 +5,7 @@ Setup Tips
 
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
-## 1) ORIN - JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
+## 1) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART1 - (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
    - Here are some notes of the actions that worked for me, based on the video above with the actions listed in sequence, but grouped by the device you need to progress the actions on
@@ -49,7 +49,50 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - Attach USB speakers
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
-## 2) ORIN - Install Jetson Inference Demo software (Dusty-nv)
+## 2) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART2 - (Setup and options) 
+ - Set up and make SWAP permanent by executing the following in a terminal window
+   - sudo systemctl disable nvargus-daemon.service
+   - sudo systemctl stop nvzramconfig.service
+   - sudo systemctl disable nvzramconfig
+   - sudo fallocate -l 16G /16GB.swap
+   - sudo chmod 600 /16GB.swap
+   - sudo mkswap /16GB.swap
+   - sudo swapon /16GB.swap
+   - sudo vim ~/.etc/fstab
+     - Notes on how to use VIM
+       - To change/insert, press "Esc" and enter ":i"
+       - To exit, press "ESC" and enter ":x!" to save and exit or ":q" to quit without saving
+     - Add the following line to the end of /etc/fstab to make the change persistent:
+	    - /ssd/16GB.swap  none  swap  sw 0  0
+ - Amend the $PATH variable to be activate during SSH access by executing the following in a terminal window
+   - sudo vim ~/.bash_profile
+     - Notes on how to use VIM
+       - To change/insert, press "Esc" and enter ":i"
+       - To exit, press "ESC" and enter ":x!" to save and exit or ":q" to quit without saving
+     - Add the following line to the end of .bash_profile to make the change persistent:
+	    - export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+- Temporaily stop the desktop from terminal window or SSH session
+  - sudo init 3
+- How to restart the desktop from a SSH session
+  - sudo init 5 
+- Change boot up behaviour - If you wish to make this persistent across reboots, you can use the following commands to change the boot-up behavior:
+  - To disable desktop on boot
+	 - sudo systemctl set-default multi-user.target
+  - To enable desktop on boot
+	 - sudo systemctl set-default graphical.target
+- To improve SSH access memory
+  - sudo nvpmodel -m 0
+  - sudo jetson_clocks
+- To shutdown  
+  - sudo shutdown -h now  
+- To restart  
+  - sudo shutdown -r now
+- To get stats on memory use
+  - free -m
+  - free -h
+  - sudo tegrastats
+      
+## 3) ORIN - Install Jetson Inference Demo software (Dusty-nv)
   (N.B. Make sure you attach a Webcam before executing the DEMO programs)
  - Install Docker Container - Open a terminal and execute the following:
    - cd Desktop
@@ -68,7 +111,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
-## 3) ORIN - Install LLAMA text-generation-webui
+## 4) ORIN - Install LLAMA text-generation-webui
 Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
    - git clone --depth=1 https://github.com/dusty-nv/jetson-containers
    - cd jetson-containers
@@ -109,11 +152,11 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
          - Select the character you want the AI to use via the dropdown
        - Near the top, click on menu tab "Chat", and start your conversation
 
-## 4) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
+## 5) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
    - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
 
-## 5) ORIN - Install vscode
+## 6) ORIN - Install vscode
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
    - Open a terminal and execute the following: 
      - cd Downloads
@@ -121,7 +164,7 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
    - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
    - Right click the VsCode icon and Select "add to desktop" for easy access
 
-## 6) ORIN - Face and speech recognition. 
+## 7) ORIN - Face and speech recognition. 
    - Open a terminal and execute:
      - sudo apt-get update
      - sudo apt-get upgrade
@@ -157,7 +200,7 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
      - Speech Recognition with a spoken response taken from GPT-3 
        - https://github.com/CurlyWurly-1/Chatbot
          
-## 7) WIN10 - Install the FileZilla "client" on your Win10 laptop
+## 8) WIN10 - Install the FileZilla "client" on your Win10 laptop
    - On your Windows machine, download the filezilla client via https://filezilla-project.org/  It makes your life a lot easier when you are able to transfer files to and from the Jetson device with ease. It means you can use a win10 desktop to backup important Jetson stuff (e.g. Jetson python programs and tip sheets) and easily re-store it back whenever you re-flash your Jetson device with SDK manager.
      
 
