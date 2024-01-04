@@ -49,7 +49,8 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - Attach USB speakers
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
-## 2) ORIN - Install Jetson Inference Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
+## 2) ORIN - Install Jetson Inference Demo software (Dusty-nv)
+  (N.B. Make sure you attach a Webcam before executing the DEMO programs)
  - Install Docker Container - Open a terminal and execute the following:
    - cd Desktop
    - mkdir zdemo
