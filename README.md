@@ -5,10 +5,10 @@ Setup Tips
 
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
-1) Install the FileZilla "client" on your Win10 laptop
+## 1) WIN10 - Install the FileZilla "client" on your Win10 laptop
    - On your Windows machine, download the filezilla client via https://filezilla-project.org/  It makes your life a lot easier when you are able to transfer files to and from the Jetson device with ease. It means you can use a win10 desktop to backup important Jetson stuff (e.g. Jetson python programs and tip sheets) and easily re-store it back whenever you re-flash your Jetson device with SDK manager.     
 
-2) JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
+## 2) ORIN - JETSON ORIN DEVELOPER KIT SETUP (Physical and software setup) 
    - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
    - Here are some notes of the actions that worked for me, based on the video above with the actions listed in sequence, but grouped by the device you need to progress the actions on
@@ -52,7 +52,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - Attach USB speakers
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
-3) INSTALL VSCODE
+## 3) ORIN - Install vscode
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
    - Open a terminal and execute the following: 
      - cd Downloads
@@ -60,7 +60,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - After it has installed, the VsCode icon can be accessed when you press the bottom left icon (like START in Windows!) and look in the "programming" section.   
    - Right click the VsCode icon and Select "add to desktop" for easy access
 
-4) INSTALL JETSON INFERENCE Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
+## 4) ORIN - Install Jetson Inference Demo software and test (N.B. Make sure you attach a Webcam before executing the DEMO programs)
  - Install Docker Container - Open a terminal and execute the following:
    - cd Desktop
    - mkdir zdemo
@@ -78,11 +78,11 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
-5) INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
+## 5) INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
    - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
 
-6) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
+## 6) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
    - Open a terminal and execute:
      - sudo apt-get update
      - sudo apt-get upgrade
@@ -113,14 +113,55 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
      - sudo python3 setup.py install
      - sudo apt-get install flac
 
-7) Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
+## 7) ORIN - Install LLAMA text-generation-webui
+Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
+   - git clone --depth=1 https://github.com/dusty-nv/jetson-containers
+   - cd jetson-containers
+   - sudo apt update
+   - sudo apt install -y python3-pip
+   - pip3 install -r requirements.txt
+   - cd jetson-containers
+   - ./run.sh $(./autotag text-generation-webui)
+     - Open a browser on your WIN10 machines and go to http://192.168.1.XXX:7860  where XXX points to your networked Jetson Orin Nano. If you have not networked your Orin nano, then execute a browser on your Orin Nano and use http://localhost:7860  
+       - Near the top, click on menu tab "model" 
+       - In field "Download model or loRA" (right window), populate field with **TheBloke/Llama-2-7b-Chat-GGUF**. Secondly, press "Get File List" and thirdly press "Download" and wait until you see a message saying "Done"
+       - Choose model
+         - Model option 1 - **TheBloke/Llama-2-7b-Chat-GGUF**
+           - In field "Model" (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
+           - In field "Model Loader" (left window near the top), select  **ExLlamav2_HF**
+           - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
+         - Model option 2 - **llama-2-7b-chat.Q4_K_M.gguf**
+           - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q4_K_M.gguf**
+           - In field "Model Loader" (left window near the top), select  **llama.cpp**
+           - Populate other fields
+             - n-gpu-layers = 128
+             - n-ctx = 2048
+             - threads = 4
+             - threads_batch = 4
+             - n_batch = 512
+         - Model option 3 - **llama-2-7b-chat.Q5_K_M.gguf**
+           - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q5_K_M.gguf**
+           - In field "Model Loader" (left window near the top), select  **llama.cpp**
+           - Populate other fields
+             - n-gpu-layers = 128
+             - n-ctx = 1024
+             - threads = 4
+             - threads_batch = 4
+             - n_batch = 512
+           - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
+       - Near the top, click on menu tab "Parameters", and then on sub-menu tab "Character"
+         - In the Character submenu, you can load sets of names and pictures of both you and the AI - but they are not globally stored
+         - Select the character you want the AI to use via the dropdown
+       - Near the top, click on menu tab "Chat", and start your conversation
+
+## 8) NEXT STEPS - Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. 
+Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
  - Face Recognition
    - https://github.com/CurlyWurly-1/Face_Recognition_With_Moving_Eyeball
  - Speech Recognition with a spoken response taken from GPT-3 
    - https://github.com/CurlyWurly-1/Chatbot
 
-8) Consider what is in Jetson AI lab https://www.jetson-ai-lab.com/tutorial-intro.html.
-   - N.B. It did not work that well for me using a Jetson Orin Nano
+
        
 ## Extra Stuff (backup - not tested - ignore)
 
