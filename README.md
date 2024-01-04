@@ -78,42 +78,8 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./backgroundnet.py /dev/video0   &nbsp; &nbsp; (DEMO 6 - Background removal)
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
-## 5) INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
-   - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
-   - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
 
-## 6) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
-   - Open a terminal and execute:
-     - sudo apt-get update
-     - sudo apt-get upgrade
-     - sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
-     - sudo apt-get install nano
-     - sudo apt-get install python3-pip 
-     - export PATH="/home/XXX/.local/bin:$PATH"  (replace XXX with your system name e.g. ORIN)
-     - pip3 install cython
-     - pip3 install gtts
-     - pip3 install playsound
-     - sudo apt-get install sox
-     - sudo apt-get install libsox-fmt-all
-     - pip3 install pyttsx3
-     - sudo apt install espeak
-     - pip3 install pyserial
-     - sudo apt-get update
-     - sudo apt-get upgrade
-     - sudo apt-get install cmake 
-     - sudo pip3 install face_recognition
-     - sudo apt-get install portaudio19-dev  
-     - sudo apt-get install python-all-dev 
-     - sudo apt-get install python3-all-dev 
-     - pip3 install pyaudio
-     - pip3 install SpeechRecognition
-     - sudo pip3 install aiohttp
-     - git clone https://github.com/openai/openai-python.git
-     - cd openai-python
-     - sudo python3 setup.py install
-     - sudo apt-get install flac
-
-## 7) ORIN - Install LLAMA text-generation-webui
+## 5) ORIN - Install LLAMA text-generation-webui
 Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
    - git clone --depth=1 https://github.com/dusty-nv/jetson-containers
    - cd jetson-containers
@@ -153,6 +119,41 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
          - In the Character submenu, you can load sets of names and pictures of both you and the AI - but they are not globally stored
          - Select the character you want the AI to use via the dropdown
        - Near the top, click on menu tab "Chat", and start your conversation
+
+## 6) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
+   - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
+   - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
+
+## 7) INSTALL MORE LIBRARIES (for GITHUB programs in step 5 - Execute individually and respond "Y" when necessary)
+   - Open a terminal and execute:
+     - sudo apt-get update
+     - sudo apt-get upgrade
+     - sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
+     - sudo apt-get install nano
+     - sudo apt-get install python3-pip 
+     - export PATH="/home/XXX/.local/bin:$PATH"  (replace XXX with your system name e.g. ORIN)
+     - pip3 install cython
+     - pip3 install gtts
+     - pip3 install playsound
+     - sudo apt-get install sox
+     - sudo apt-get install libsox-fmt-all
+     - pip3 install pyttsx3
+     - sudo apt install espeak
+     - pip3 install pyserial
+     - sudo apt-get update
+     - sudo apt-get upgrade
+     - sudo apt-get install cmake 
+     - sudo pip3 install face_recognition
+     - sudo apt-get install portaudio19-dev  
+     - sudo apt-get install python-all-dev 
+     - sudo apt-get install python3-all-dev 
+     - pip3 install pyaudio
+     - pip3 install SpeechRecognition
+     - sudo pip3 install aiohttp
+     - git clone https://github.com/openai/openai-python.git
+     - cd openai-python
+     - sudo python3 setup.py install
+     - sudo apt-get install flac
 
 ## 8) NEXT STEPS - Now your Jetson Orin Developer Kit is ready to do face recognition with full CUDA GPU acceleration and speech recognition. 
 Look here for programs. To install, use "git clone" and execute within VsCode - make sure you change the python version from 3.9 to 3.8 (VsCode-Bottom Right)
