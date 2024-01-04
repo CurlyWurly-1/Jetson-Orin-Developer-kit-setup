@@ -73,7 +73,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
 	    - export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 - How to access Jetson via SSH
   - On your WIN10 PC, open a terminal window and execute the following command
-    - ssh 192.168.1.*AAA* -l *BBB*		(where *AAA* points to your Orin Nano in the network, and *BBB* is the name you have given it durin the setup above e.g. "orin")    
+    - ssh 192.168.1.*AAA* -l *BBB*		(where *AAA* points to your Orin Nano in the network, and *BBB* is the name you have given it during the setup above e.g. "orin")    
 - Temporaily stop the desktop - From terminal window or SSH session
   - sudo init 3
 - How to restart the desktop - from a SSH session
