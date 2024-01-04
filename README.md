@@ -79,31 +79,31 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
    - ./run.sh $(./autotag text-generation-webui)
      - Open a browser on your WIN10 machines and go to http://192.168.1.XXX:7860  where XXX points to your networked Jetson Orin Nano. If you have not networked your Orin nano, then execute a browser on your Orin Nano and use http://localhost:7860  
        - Near the top, click on menu tab "model" 
-       - In field "Download model or loRA" (right window), populate field with **TheBloke/Llama-2-7b-Chat-GGUF**. Secondly, press "Get File List" and thirdly press "Download" and wait until you see a message saying "Done"
-       - Choose model
-         - Model option 1 - **TheBloke/Llama-2-7b-Chat-GGUF**
-           - In field "Model" (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
-           - In field "Model Loader" (left window near the top), select  **ExLlamav2_HF**
-           - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
-         - Model option 2 - **llama-2-7b-chat.Q4_K_M.gguf**
-           - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q4_K_M.gguf**
-           - In field "Model Loader" (left window near the top), select  **llama.cpp**
-           - Populate other fields
-             - n-gpu-layers = 128
-             - n-ctx = 2048
-             - threads = 4
-             - threads_batch = 4
-             - n_batch = 512
-         - Model option 3 - **llama-2-7b-chat.Q5_K_M.gguf**
-           - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q5_K_M.gguf**
-           - In field "Model Loader" (left window near the top), select  **llama.cpp**
-           - Populate other fields
-             - n-gpu-layers = 128
-             - n-ctx = 1024
-             - threads = 4
-             - threads_batch = 4
-             - n_batch = 512
-           - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
+         - In field "Download model or loRA" (right window), populate field with **TheBloke/Llama-2-7b-Chat-GGUF**. Secondly, press "Get File List" and thirdly press "Download" and wait until you see a message saying "Done"
+         - Choose model
+           - Model option 1 - **TheBloke/Llama-2-7b-Chat-GGUF**
+             - In field "Model" (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
+             - In field "Model Loader" (left window near the top), select  **ExLlamav2_HF**
+             - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
+           - Model option 2 - **llama-2-7b-chat.Q4_K_M.gguf**
+             - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q4_K_M.gguf**
+             - In field "Model Loader" (left window near the top), select  **llama.cpp**
+             - Populate other fields
+               - n-gpu-layers = 128
+               - n-ctx = 2048
+               - threads = 4
+               - threads_batch = 4
+               - n_batch = 512
+           - Model option 3 - **llama-2-7b-chat.Q5_K_M.gguf**
+             - In field "Model" (left window near the top), select  **llama-2-7b-chat.Q5_K_M.gguf**
+             - In field "Model Loader" (left window near the top), select  **llama.cpp**
+             - Populate other fields
+               - n-gpu-layers = 128
+               - n-ctx = 1024
+               - threads = 4
+               - threads_batch = 4
+               - n_batch = 512
+         - Press "Load" (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
        - Near the top, click on menu tab "Parameters", and then on sub-menu tab "Character"
          - In the Character submenu, you can load sets of names and pictures of both you and the AI - but they are not globally stored
          - Select the character you want the AI to use via the dropdown
