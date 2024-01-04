@@ -50,7 +50,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
 ## 2) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART2 - (Setup and options) 
- - Set up and make SWAP permanent by executing the following in a terminal window
+ - Set up SWAP and make it permanent - By executing the following in a terminal window
    - sudo systemctl disable nvargus-daemon.service
    - sudo systemctl stop nvzramconfig.service
    - sudo systemctl disable nvzramconfig
@@ -64,16 +64,16 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - To exit, press "ESC" and enter ":x!" to save and exit or ":q" to quit without saving
      - Add the following line to the end of /etc/fstab to make the change persistent:
 	    - /ssd/16GB.swap  none  swap  sw 0  0
- - Amend the $PATH variable to be activate during SSH access by executing the following in a terminal window
+ - Set up the $PATH variable so that it is activate during SSH access - By executing the following in a terminal window
    - sudo vim ~/.bash_profile
      - Notes on how to use VIM
        - To change/insert, press "Esc" and enter ":i"
        - To exit, press "ESC" and enter ":x!" to save and exit or ":q" to quit without saving
      - Add the following line to the end of .bash_profile to make the change persistent:
 	    - export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-- Temporaily stop the desktop from terminal window or SSH session
+- Temporaily stop the desktop - From terminal window or SSH session
   - sudo init 3
-- How to restart the desktop from a SSH session
+- How to restart the desktop - from a SSH session
   - sudo init 5 
 - Change boot up behaviour - If you wish to make this persistent across reboots, you can use the following commands to change the boot-up behavior:
   - To disable desktop on boot
@@ -83,9 +83,9 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
 - To improve SSH access memory
   - sudo nvpmodel -m 0
   - sudo jetson_clocks
-- To shutdown  
+- To shutdown immediately  
   - sudo shutdown -h now  
-- To restart  
+- To shutdown and restart  
   - sudo shutdown -r now
 - To get stats on memory use
   - free -m
