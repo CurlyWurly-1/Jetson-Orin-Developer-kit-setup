@@ -71,6 +71,9 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - To exit, press "ESC" and enter ":x!" to save and exit or ":q" to quit without saving
      - Add the following line to the end of .bash_profile to make the change persistent:
 	    - export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+- How to access Jetson via SSH
+  - On your WIN10 PC, open a terminal window and execute the following command
+    - ssh 192.168.1.<XXX> -l <YYY>		(where <XXX> points to your Orin Nanao in the network, and <YYY> is the name you have given it e.g. "orin")    
 - Temporaily stop the desktop - From terminal window or SSH session
   - sudo init 3
 - How to restart the desktop - from a SSH session
