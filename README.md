@@ -155,6 +155,18 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
 ## 5) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
    - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
+   - Once setup, these commands worked
+     - C Programs
+       - sudo deepstream-app -c /opt/nvidia/deepstream/deepstream-6.4/samples/configs/deepstream-app/source1_usb_dec_infer_resnet_int8.txt 
+     - Python programs
+       - Considerations
+         - You only need to use "sudo" for the first time, to create the model engine from scratch
+         - Deepstream-test1-usbcam essental required fix - see program at end - it is a "Z" version !!)
+           - 1) Change the folder permision using sudo **chmod a+rwx /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/**
+           - 2) Copy "config.txt" file to a Z version, and change the line that denotes the model engine ref so that it uses "B30" instead of "B1" 
+           - 3) Copy "python" program  to a Z version, and change the line that denotes what "config.txt" file to use, so that it uses the "Z" version created in the previous step 
+       - cd /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/
+       - sudo -E python3 zdeepstream_test_1_usb.py /dev/video0 
 
 ## 6) ORIN - Install vscode
    - Using a browser, download the Ubuntu ".deb" file for "ARM64" from https://code.visualstudio.com/download
