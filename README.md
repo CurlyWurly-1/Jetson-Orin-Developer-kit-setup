@@ -166,13 +166,19 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
      - C Programs
        - sudo deepstream-app -c /opt/nvidia/deepstream/deepstream-6.4/samples/configs/deepstream-app/source1_usb_dec_infer_resnet_int8.txt 
      - Python programs
-       - Considerations
-         - You only need to use "sudo" for the first time, to create the model engine from scratch
+       - Considerations (N.B. The original python program code is not set up correctly - make these amendments so that the cloned python program works OK) 
+         - N.B. You only need to use "sudo" the first time you execute the python program. Thjis gives permissino for the created model to be stored. If you don't use sudo at least once. then the python program will always want to create the model (because it can't find it stored anywhere) 
          - Deepstream-test1-usbcam essental required fix - see program at end - it is a "Z" version !!)
-           - 1) Change the folder permision using:
-             - **sudo chmod a+rwx /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/**
-           - 2) Copy "config.txt" file to a Z version, and change the line that denotes the model engine ref to use **B30** instead of **B1** 
-           - 3) Copy "python" program  to a Z version, and change the line that denotes what "config.txt" file to use, so that it uses the "Z" version created in the previous step 
+           - 1) Change the folder permision using the command in the following line:
+             - sudo chmod a+rwx /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/
+           - 2) Clone "config.txt" file
+             - Copy "config.txt" file to a "zconfig.txt"
+             - Using vim (or other text editor), edit "zconfig.txt" to change the line that denotes the model engine ref to use **B30** instead of **B1**
+             - save "zconfig.txt"
+           - 3) Clone python program "deepstream_test_1_usb.py"
+             - Copy "python" program "deepstream_test_1_usb.py" to "zdeepstream_test_1_usb.py"
+             - Using vim (or other text editor), edit "zdeepstream_test_1_usb.py" and change the line that refers to "config.txt" so that it uses "zconfig.txt" as created in the previous step
+             - Save "zdeepstream_test_1_usb.py" 
        - cd /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/
        - sudo -E python3 zdeepstream_test_1_usb.py /dev/video0 
 
