@@ -117,7 +117,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
 ## 4) ORIN - Install LLAMA text-generation-webui
 Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
 
-N.B. If you have followed the steps as listed below and you are now at the stage where the webpage can be displayed (http://192.168.1.*aaa*:7860), it makes sense to re-boot the Jetson Orin nano in "headless" mode (i.e. without the desktop being displayed) and use SSH to execute the following commands
+N.B. If you are re-reading this section as you have followed enough of the steps listed below to get the webpage to be displayed (http://192.168.1.*aaa*:7860), it makes sense to re-boot the Jetson Orin nano in "headless" mode (i.e. without the desktop being displayed) and use SSH to execute the following commands. Bt doingthis, you maximise the memory that can be used byu the LLM model.  
  - cd jetson-containers
  - ./run.sh $(./autotag text-generation-webui)
 
