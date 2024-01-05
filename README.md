@@ -174,7 +174,7 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                - Press button **"Download"** and wait until you see a message saying "Done"
              - Load Model  **"mistral-7b-v0.1.Q5_K_M.gguf"**
                - In field **"Model"** (left window near the top), select  **"mistral-7b-v0.1.Q5_K_M.gguf"**
-               - In field **"Model Loader"** (left window near the top), select  **"ExLlamav2_HF"**
+               - In field **"Model Loader"** (left window near the top), select  **"llama.cpp"**
                - Populate other fields as below:
                  - n-gpu-layers = 128
                  - n-ctx = 4096
@@ -182,7 +182,21 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                  - threads_batch = 4
                  - n_batch = 512
 	       - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
-
+           - **OPTIONAL MODEL 3** 
+             - Download -  **"TheBloke/Mistral-7B-OpenOrca-GGUF"**
+               - In field **"Download model or loRA"** (right window), populate field with **"TheBloke/Mistral-7B-OpenOrca-GGUF"**.
+               - Press button **"Get File List"**
+               - Press button **"Download"** and wait until you see a message saying "Done"
+             - Load Model  **"mistral-7b-openorca.Q5_K_M.gguf"**
+               - In field **"Model"** (left window near the top), select  **"mistral-7b-openorca.Q5_K_M.gguf"**
+               - In field **"Model Loader"** (left window near the top), select  **"llama.cpp"**
+               - Populate other fields as below:
+                 - n-gpu-layers = 128
+                 - n-ctx = 4096
+                 - threads = 4
+                 - threads_batch = 4
+                 - n_batch = 512
+	       - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
 
 ## 5) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
