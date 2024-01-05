@@ -166,8 +166,8 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
      - C Programs
        - sudo deepstream-app -c /opt/nvidia/deepstream/deepstream-6.4/samples/configs/deepstream-app/source1_usb_dec_infer_resnet_int8.txt 
      - Python programs
-       - Considerations (N.B. The original python program code is not set up correctly - make these amendments so that the cloned python program works OK) 
-         - N.B. You only need to use "sudo" the first time you execute the python program. Thjis gives permissino for the created model to be stored. If you don't use sudo at least once. then the python program will always want to create the model (because it can't find it stored anywhere) 
+       - Consideration - When executing the python program, use the prefix sudo or not?
+         - You only need to use "sudo" the first time you execute the python program. This gives permission to the program to store the created model for subsequent re-use. If sudo is not used at least once, then the python program will not find the model and so the program will decide to create the model every time the program is executed - it takes AGES to do this!
        - Change the folder permision using the command in the following line (This allows you to store custom code in the directory):
          - sudo chmod a+rwx /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/
        - Make changes to content of directory 
