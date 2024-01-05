@@ -49,7 +49,7 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
        - Attach USB speakers
        - OPTIONALLY - Set up Wifi as approrpriate - via a wifi card or dongle and remove the network cable.
 
-## 2) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART2 - (Setup and options) 
+## 2) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART2 - (Setup, options and useful commands that you use in a terminal window or SSH session) 
  - Set up SWAP and make it permanent - By executing the following in a terminal window
    - sudo systemctl disable nvargus-daemon.service
    - sudo systemctl stop nvzramconfig.service
