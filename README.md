@@ -143,8 +143,8 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                - threads = 4
                - threads_batch = 4
                - n_batch = 512
-             - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
-	   - Model option 3 - **llama-2-7b-chat.Q5_K_M.gguf**
+             - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded"
+           - Model option 3 - **llama-2-7b-chat.Q5_K_M.gguf**
              - In field **"Model"** (left window near the top), select  **llama-2-7b-chat.Q5_K_M.gguf**
              - In field **"Model Loader"** (left window near the top), select  **llama.cpp**
              - Populate other fields
