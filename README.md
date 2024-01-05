@@ -162,11 +162,11 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
 ## 5) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
    - https://www.youtube.com/watch?v=vDxL2-YJcSY&t=637s
-   - Once setup, use the commands listed against "C Programs" or "Python Programs"
-     - C Programs
+   - Once setup, use the commands listed against either the "DEEPSTREAM APP" option or the "PYTHON PROGRAMS" option
+     - DEEPSTREAM APP option
        - Run the C program code by executing the fllowing command
          - sudo deepstream-app -c /opt/nvidia/deepstream/deepstream-6.4/samples/configs/deepstream-app/source1_usb_dec_infer_resnet_int8.txt 
-     - Python programs
+     - PYTHON PROGRAMS option
        - Consideration to think about - When executing the python program, should you use the prefix sudo or not?
          - You only need to use "sudo" the first time you execute the python program. This gives permission to the program to store the created model for subsequent re-use. If sudo is not used at least once, then the python program will not find the model and so the program will decide to create the model every time the program is executed - it takes AGES to do this!
        - Change the directory permissions using the command in the following line (This allows you to store custom code in the directory):
