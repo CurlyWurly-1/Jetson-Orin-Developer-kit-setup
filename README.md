@@ -132,7 +132,7 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
          - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
            - In field **"Model"** (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
            - In field **"Model Loader"** (left window near the top), select  **ExLlamav2_HF**
-           - In field **"max_seq_len"** (left window near the top), enter a value of 15360 (if you get an error, start with a value of 4098 and increase untill no error)  
+           - In field **"max_seq_len"** (left window near the top), enter a value of **15360** (if you get an error, start with a value of **4098** and increase untill no error)  
 	   - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
          - *OPTIONAL EXTRAS - Only bother with these if you want to experiment - the download/load option above is the best model to use anyway - as of January 2024* 
            - **OPTION 1** 
