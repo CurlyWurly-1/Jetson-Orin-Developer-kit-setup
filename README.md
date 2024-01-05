@@ -124,23 +124,30 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
    - cd jetson-containers
    - ./run.sh $(./autotag text-generation-webui)
      - Open a browser on your WIN10 machines and go to http://192.168.1.XXX:7860  where XXX points to your networked Jetson Orin Nano. If you have not networked your Orin nano, then execute a browser on your Orin Nano and use http://localhost:7860  
-       - 1 - Near the top, click on menu tab "model" 
-         - Download **TheBloke/Mistral-7B-OpenOrca-GPTQ**
+       - Set the model - Near the top, click on menu tab **"model"** 
+         - Action 1 - Download **TheBloke/Mistral-7B-OpenOrca-GPTQ**
            - In field **"Download model or loRA"** (right window), populate field with **TheBloke/Mistral-7B-OpenOrca-GPTQ**.
            - Press button **"Get File List"**
            - Press button **"Download"** and wait until you see a message saying "Done"
-         - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
+         - Action 2 - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
            - In field **"Model"** (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
            - In field **"Model Loader"** (left window near the top), select  **ExLlamav2_HF**
-           - In field **"max_seq_len"** (left window near the top), enter a value of **15360** (if you get an error, start with a value of **4098** and increase untill no error)  
-	   - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
-         - *OPTIONAL EXTRAS - Only bother with these if you want to experiment - the download/load option above is the best model to use anyway - as of January 2024* 
-           - **OPTION 1** 
-             - 1 - Download -  **TheBloke/Llama-2-7b-Chat-GGUF**
+           - In field **"max_seq_len"** (left window near the top), enter a value of **15360** (if you get an error, start with a value of **4098** and increase untill no error)
+           - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded"
+       - Set parameters - Near the top, click on menu tab **"Parameters"**, and then on sub-menu tab **"Character"**
+         - Action 1 - In the Character submenu, you can load a set of names and pictures of both you and the AI - but be aware, they are only stored for your browser session
+         - Action 2 - Via the dropdown, make sure you select the character you want the AI to use via the dropdown
+       - Have a chat with your AI - Near the top, click on menu tab **"Chat"**
+         - Action 1 - Start your conversation !      
+
+       - *OPTIONAL*
+         - *Only bother downloading and uploading these models if you want to practise getting models and you want to experiment with them. The model listed above (**TheBloke/Mistral-7B-OpenOrca-GPTQ**) is the best model to use anyway - as of January 2024* 
+           - **OPTIONAL MODEL 1** 
+             - Download -  **TheBloke/Llama-2-7b-Chat-GGUF**
                - In field **"Download model or loRA"** (right window), populate field with **TheBloke/Llama-2-7b-Chat-GGUF**.
                - Press button **"Get File List"**
                - Press button **"Download"** and wait until you see a message saying "Done"
-             - 1 - Upload model 1 - **llama-2-7b-chat.Q4_K_M.gguf**
+             - Upload model 1 - **llama-2-7b-chat.Q4_K_M.gguf**
                - In field **"Model"** (left window near the top), select  **llama-2-7b-chat.Q4_K_M.gguf**
                - In field **"Model Loader"** (left window near the top), select  **llama.cpp**
                - Populate other fields as below:
@@ -150,7 +157,7 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                  - threads_batch = 4
                  - n_batch = 512
                - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded"
-             - 1 - Upload model 2 - **llama-2-7b-chat.Q5_K_M.gguf**
+             - Alternative model 2 - **llama-2-7b-chat.Q5_K_M.gguf**
                - In field **"Model"** (left window near the top), select  **llama-2-7b-chat.Q5_K_M.gguf**
                - In field **"Model Loader"** (left window near the top), select  **llama.cpp**
                - Populate other fields
@@ -160,21 +167,17 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                  - threads_batch = 4
                  - n_batch = 512
                - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
-           - **Option 2** 
-             - 2 - Download -  **TheBloke/Mistral-7B-v0.1-GGUF**
+           - **OPTIONAL MODEL 2** 
+             - Download -  **TheBloke/Mistral-7B-v0.1-GGUF**
                - In field **"Download model or loRA"** (right window), populate field with **TheBloke/Mistral-7B-v0.1-GGUF**.
                - Press button **"Get File List"**
                - Press button **"Download"** and wait until you see a message saying "Done"
-             - 2 - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
+             - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
                - In field **"Model"** (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
                - In field **"Model Loader"** (left window near the top), select  **ExLlamav2_HF**
                - In field **"max_seq_len"** (left window near the top), enter a value of 4098 (if you get an error, start with a value of 4098 and increase untill no error)  
 	       - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
 
-       - 2 - Near the top, click on menu tab **"Parameters"**, and then on sub-menu tab **"Character"**
-         - In the Character submenu, you can load a set of names and pictures of both you and the AI - but be aware, they are only stored for your browser session
-         - Via the dropdown, select the character you want the AI to use via the dropdown
-       - 3 - Near the top, click on menu tab "Chat", and start your conversation
 
 ## 5) ORIN - INSTALL DEEPSTREAM - Follow info from these 2 references (I hope to write a condensed walkthrough soon - on how to do this) 
    - https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
