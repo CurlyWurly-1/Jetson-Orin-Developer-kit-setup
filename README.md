@@ -115,13 +115,13 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
    - ./depthnet.py /dev/video0        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (DEMO 7 - Monocular Depth)     
 
 ## 4) ORIN - Install LLAMA text-generation-webui
-Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
+Tutorial is here  [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
 
-N.B. If you are re-reading this section as you have followed enough of the steps listed below to get the webpage to be displayed (http://192.168.1.*aaa*:7860), it makes sense to re-boot the Jetson Orin nano in "headless" mode (i.e. without the desktop being displayed) and use SSH to execute the following commands. Bt doingthis, you maximise the memory that can be used byu the LLM model.  
+N.B. If you have followed enough of the steps below to get the webpage to be displayed (http://192.168.1.*aaa*:7860), it makes sense to re-boot the Jetson Orin nano in "headless" mode (i.e. without the desktop being displayed) and use SSH to login, and then execute the following commands to get the webpage back up. By doing this, you maximise the memory that can be used by the LLM model.  
  - cd jetson-containers
  - ./run.sh $(./autotag text-generation-webui)
 
-However, these are the steps to help you get things setup whileyou are still in "desktop" mode
+However, these are the steps to help you get things setup while you are still in "desktop" mode
  - Open a terminal window  
    - git clone --depth=1 https://github.com/dusty-nv/jetson-containers
    - cd jetson-containers
