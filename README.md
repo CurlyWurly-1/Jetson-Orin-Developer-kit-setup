@@ -129,8 +129,8 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
            - In field **"Download model or loRA"** (right window), populate field with **"TheBloke/Mistral-7B-OpenOrca-GPTQ"**.
            - Press button **"Get File List"**
            - Press button **"Download"** and wait until you see a message saying "Done"
-         - Action 2 - Load Model  **"TheBloke_Llama-2-7b-Chat-GGUF"**
-           - In field **"Model"** (left window near the top), select  **"TheBloke_Llama-2-7b-Chat-GPTQ"**
+         - Action 2 - Load Model  **"TheBloke_Mistral-7B-OpenOrca-GPTQ"** *(Note that the "/" has turned into a "-")*
+           - In field **"Model"** (left window near the top), select  **"TheBloke_Mistral-7B-OpenOrca-GPTQ"**
            - In field **"Model Loader"** (left window near the top), select  **"ExLlamav2_HF"**
            - In field **"max_seq_len"** (left window near the top), enter a value of **"15360"** (if you get an error, start with a value of **"4098"** and increase until there is no error)
            - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded"
