@@ -172,10 +172,15 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
                - In field **"Download model or loRA"** (right window), populate field with **TheBloke/Mistral-7B-v0.1-GGUF**.
                - Press button **"Get File List"**
                - Press button **"Download"** and wait until you see a message saying "Done"
-             - Load Model  **TheBloke/Llama-2-7b-Chat-GGUF**
-               - In field **"Model"** (left window near the top), select  **TheBloke_Llama-2-7b-Chat-GPTQ**
+             - Load Model  **mistral-7b-v0.1.Q5_K_M.gguf**
+               - In field **"Model"** (left window near the top), select  **mistral-7b-v0.1.Q5_K_M.gguf**
                - In field **"Model Loader"** (left window near the top), select  **ExLlamav2_HF**
-               - In field **"max_seq_len"** (left window near the top), enter a value of 4098 (if you get an error, start with a value of 4098 and increase untill no error)  
+               - Populate other fields as below:
+                 - n-gpu-layers = 128
+                 - n-ctx = 4096
+                 - threads = 4
+                 - threads_batch = 4
+                 - n_batch = 512
 	       - Press button **"Load"** (left window near the top) - Wait until a message is seen in the right window saying "Successfully loaded" 
 
 
