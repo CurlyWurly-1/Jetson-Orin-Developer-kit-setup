@@ -6,7 +6,7 @@ Setup Tips
 Be aware that when a Jetson Orin developer kit is powered down, it seems to forget what USB devices are attached to it. Consider that after a powerup, you always have to remove and re-insert the USB cables for the webcam and speakers to make these devices re-recognised as being attached.   
 
 ## 1) ORIN - JETSON ORIN DEVELOPER KIT SETUP - PART1 - (Physical and software setup) 
-   - Use the Jetson SDK Manager software to flash the NVME drive with Jetson software as per here
+   - In your Ubuntu desktop, execute the Jetson SDK Manager software to flash the Jetson Orin nano as per here. N.B. Be aware, the steps below refer to the use of a NVME drive with no SD card installed.
      - https://www.youtube.com/watch?v=Ucg5Zqm9ZMk&t
    - Here are some notes of the actions that worked for me, based on the video above with the actions listed in sequence, but grouped by the device you need to progress the actions on
      - Ubuntu Desktop
@@ -116,13 +116,19 @@ Be aware that when a Jetson Orin developer kit is powered down, it seems to forg
 
 ## 4) ORIN - Install LLAMA text-generation-webui
 Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](https://www.jetson-ai-lab.com/tutorial_text-generation.html)
+
+N.B. If you have followed the steps as listed below and you are now at the stage where the webpage can be displayed (http://192.168.1.*aaa*:7860), it makes sense to re-boot the Jetson Orin nano in "headless" mode (i.e. without the desktop being displayed) and use SSH to execute the following commands
+ - cd jetson-containers
+ - ./run.sh $(./autotag text-generation-webui)
+
+However, these are the steps to help you get things setup whileyou are still in "desktop" mode
+ - Open a terminal window  
    - git clone --depth=1 https://github.com/dusty-nv/jetson-containers
    - cd jetson-containers
    - sudo apt update
    - sudo apt install -y python3-pip
    - pip3 install -r requirements.txt
-   - cd jetson-containers
-   - ./run.sh $(./autotag text-generation-webui)
+
      - Open a browser on your WIN10 machines and go to http://192.168.1.XXX:7860  where XXX points to your networked Jetson Orin Nano. If you have not networked your Orin nano, then execute a browser on your Orin Nano and use http://localhost:7860  
        - Set the model - Near the top, click on menu tab **"model"** 
          - Action 1 - Download **"TheBloke/Mistral-7B-OpenOrca-GPTQ"**
