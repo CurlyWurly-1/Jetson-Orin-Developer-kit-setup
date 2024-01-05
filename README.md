@@ -171,11 +171,11 @@ Install some tutorials from [http://www.jetson-ai-lab.com/tutorial-intro.html](h
          - You only need to use "sudo" the first time you execute the python program. This gives permission to the program to store the created model for subsequent re-use. If sudo is not used at least once, then the python program will not find the model and so the program will decide to create the model every time the program is executed - it takes AGES to do this!
        - Change the directory permissions using the command in the following line (This allows you to store custom code in the directory):
          - sudo chmod a+rwx /opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps/deepstream-test1-usbcam/
-       - Make changes to content of directory 
-	 - Clone "config.txt" file and change the clone using vim (or other text editor)
+       - Make changes to content of directory
+         - Clone "config.txt" file and change the clone using vim (or other text editor
            - Copy "config.txt" file to "zconfig.txt"
            - Edit "zconfig.txt" to change the line that denotes the model engine ref to use **B30** instead of **B1**
-           - Eave "zconfig.txt"
+           - Save "zconfig.txt"
          - Clone python program "deepstream_test_1_usb.py" and change the clone using vim (or other text editor)
            - Copy "python" program "deepstream_test_1_usb.py" to "zdeepstream_test_1_usb.py"
            - Edit "zdeepstream_test_1_usb.py" and change the line that refers to "config.txt" to refer instead to "zconfig.txt" (as created in the previous step)
